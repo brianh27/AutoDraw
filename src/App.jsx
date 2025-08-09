@@ -143,20 +143,25 @@ function App() {
           </p>
         </div>
         
-        <div className="flex justify-center mb-4">
-          <div className="border-4 border-gray-300 rounded-lg shadow-inner">
+        <div className="relative w-[220px] h-[220px] border-4 border-gray-300 rounded-lg shadow-inner">
+            <img
+              src="https://cdn.discordapp.com/attachments/1033910327496163378/1403614523293962280/image.png?ex=68983164&is=6896dfe4&hm=b5fa8a926f3ac8b8bd42ae1997d696b345b9816b20736e366257a432d04a28f7&"
+              alt="background"
+              className="absolute top-0 left-0 w-full h-full object-cover opacity-50 rounded-lg pointer-events-none"
+              style={{ aspectRatio: "1 / 1" }}
+            />
             <canvas
               ref={canvasRef}
               width={220}
               height={220}
-              className="block cursor-crosshair rounded"
+              className="relative block cursor-crosshair rounded"
               onMouseDown={startDrawing}
               onMouseMove={draw}
               onMouseUp={stopDrawing}
               onMouseLeave={stopDrawingAndFinalize}
             />
           </div>
-        </div>
+
         
         <div className="text-center space-y-3">
           <button
